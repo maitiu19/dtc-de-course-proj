@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+    - name: staging
+      #For bigquery:
+      database: composite-keel-360713
+
+      schema: nytaxi
+
+      # loaded_at_field: record_loaded_at
+      tables:
+        - name: green_tripdata_part
+        - name: yellow_tripdata_part
+         # freshness:
+           # error_after: {count: 6, period: hour}
